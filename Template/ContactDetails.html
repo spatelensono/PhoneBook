@@ -1,0 +1,32 @@
+﻿<h3> View Contact Details of : </h3>
+<div >
+    <table>
+        <tr>
+            <td> Name      - </td>
+            <td><input type="text" name="iName" ng-model="tmpContact.name" readonly /></td>
+        </tr>
+        <tr>
+            <td> Phone      - </td>
+            <td><input type="text" name="iPhone" ng-model="tmpContact.phone" readonly /></td>
+        </tr>
+        <tr>
+            <td> Email      - </td>
+            <td><input type="text" name="iEmail" ng-model="tmpContact.email" readonly /></td>
+        </tr>
+        <tr>
+            <td> Birthday   - </td>
+            <td><input type="text" name="iBirthday" ng-model="tmpContact.birthday" readonly /></td>
+        </tr>
+        <tr>
+            <td> Avatar     - </td>
+            <td><input type="text" name="iAavtar" ng-model="tmpContact.avatar" readonly /></td>
+        </tr>
+    </table>
+    <br />
+    <!--<Ul>
+        <li>Status of Contact = {{viewCtrl.foundIt}} </li>
+    </Ul>-->
+    <a href="/">Back to List</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="/EditContactDetails/:{{tmpContact.id}}">Edit</a>
+    <br />
+</div>
