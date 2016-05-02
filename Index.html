@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html ng-app="myPBModule">
+<head>
+    <title>Phone Book Application</title>
+    <base href="/" />
+    <script src="Scripts/Angular.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="Scripts/HelperJS.js"></script>
+    <link href="Styles/Styles.css" rel="stylesheet" />
+
+</head>
+
+<body ng-controller="myPHBController as mainCtrl">
+    <br />    
+    <h1>                 Phone Book Application   </h1>
+    <ng-view></ng-view>
+    <br />
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Phone</td>
+                    <td hidden="hidden">Email</td>
+                    <td hidden="hidden">Birthday</td>
+                    <td hidden="hidden">Avatar</td>
+                    <td ></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="contact in contacts">
+
+                    <td><a href="/ContactDetails/{{contact.id}}"> {{contact.name}} </a></td>
+                    <td>{{contact.phone}} </td>
+                    <td hidden="hidden">{{contact.email}} </td>
+                    <td hidden="hidden">{{contact.birthday}} </td>
+                    <td hidden="hidden">{{contact.avatar}} </td>
+                    <td ><a href="/ContactDetails/{{contact.id}}">View</a> </td>
+                </tr>
+            </tbody>
+        </table>
+        <br />
+        <a href="/AddNewContact"> Add New Contact</a>
+        <br />
+    </div>
+</body>
+</html>
+
