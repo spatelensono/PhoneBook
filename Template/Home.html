@@ -1,0 +1,29 @@
+﻿<div class="table-responsive">
+    <table class="table-hover">
+        <thead>
+            <tr>
+                <td></td>
+                <td>Name</td>
+                <td>Phone</td>
+                <td hidden="hidden">Email</td>
+                <td hidden="hidden">Birthday</td>
+                <td hidden="hidden">Avatar</td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="contact in contacts">
+                <td><a href="/ContactDetails/{{contact.id}}"><img ng-src="{{contact.avatar}}" class="img-circle" alt="Cinque Terre" width="25" height="25"></a> </td>
+                <td><a href="/ContactDetails/{{contact.id}}"> {{contact.name}} </a></td>
+                <td>{{contact.phone}} </td>
+                <td hidden="hidden">{{contact.email}} </td>
+                <td hidden="hidden">{{contact.birthday}} </td>
+                <td hidden="hidden">{{contact.avatar}} </td>
+                <td><a href="/ContactDetails/{{contact.id}}">View</a> </td>
+            </tr>
+        </tbody>
+    </table>
+    <br />
+    <a href="/AddNewContact"> Add New Contact</a>
+    <br />
+</div>
